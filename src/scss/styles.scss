@@ -1,11 +1,11 @@
 @import "node_modules/bootstrap/scss/mixins/_breakpoints";
 
 // Variable overrides
-$c1: #283149;
-$c2: #404b69;
-$c3: #f73859;
-$c4: #dbedf3;
-$c5: #1b243c;
+$c1: #000;
+$c2: #000;
+$c3: #000;
+$c4: #000;
+$c5: #000;
 
 $theme-colors: (
   'primary': $c3
@@ -40,12 +40,12 @@ $spacers: (
 
 $grid-gutter-width: 60px;
 
-$font-family-base: "Rubik", sans-serif;
+$font-family-base: "circularStd", sans-serif;
 $font-size-base: 0.875rem;
 $line-height-base: 1.7;
 
 $headings-margin-bottom: $spacer * .4;
-$headings-font-family: "Oxygen", sans-serif;
+$headings-font-family: "circularStdBold", sans-serif;
 $headings-font-weight: 700;
 $headings-line-height: 1.4;
 $headings-color: $c3;
@@ -66,10 +66,22 @@ $input-btn-font-size-lg: $font-size-base;
 $input-btn-line-height-lg: $line-height-base;
 
 // Custom css
-body { color: $c4 !important; background-color: $c1 !important; font-size: 1rem !important; }
-a { transition: 200ms; }
+@font-face {
+    font-family: 'circularStdBold';
+    src: url('../assets/fonts/CircularStd-Bold.woff2') format('woff2'),
+         url('../assets/fonts/CircularStd-Bold.woff') format('woff'),
+         url('../assets/fonts/CircularStd-Bold.ttf') format('truetype');
+  }
 
-.base-row > .col { width: 100% !important; }
+@font-face {
+    font-family: 'circularStd';
+    src: url('../assets/fonts/CircularStd-Medium.woff2') format('woff2'),
+         url('../assets/fonts/CircularStd-Medium.woff') format('woff'),
+         url('../assets/fonts/CircularStd-Medium.ttf') format('truetype');
+  }
+
+body { color: $c4 !important; font-size: 1rem !important; }
+a { transition: 200ms; }
 
 .btn {
     text-transform: uppercase;
@@ -79,43 +91,7 @@ a { transition: 200ms; }
    border-radius: 0 !important;
 }
 
-.hero-img {
-    max-height: 400px;
-}
 
-.services-cards {
-    .btn {
-        width: 100% !important;
-    }
-}
-
-.card {
-    background-color: $c2 !important;
-    border-top: 5px solid $c4 !important;
-    border-radius: 0 !important;
-    padding: 20px !important;
-}
-
-.light-bg {
-    background-color: $c2;
-}
-
-.dark-bg {
-    background-color: $c5;
-}
-
-.img-full {
-    max-width: 100%;
-}
-
-.img-med {
-    max-width: 85%;
-}
-
-.img-shadow {
-    box-shadow: 50px 50px 0 0 $c3;
-    margin-bottom: 50px;
-}
 
 .footer { 
     ul {
