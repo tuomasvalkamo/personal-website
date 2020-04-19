@@ -21,9 +21,9 @@ $grid-breakpoints: (
 
 $container-max-widths: (
   sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1360px
+  md: 750px,
+  lg: 750px,
+  xl: 750px
 );
 
 $spacer: 3.125rem;
@@ -41,7 +41,7 @@ $spacers: (
 $grid-gutter-width: 60px;
 
 $font-family-base: "circularStd", sans-serif;
-$font-size-base: 0.875rem;
+$font-size-base: 1rem;
 $line-height-base: 1.7;
 
 $headings-margin-bottom: $spacer * .4;
@@ -80,18 +80,30 @@ $input-btn-line-height-lg: $line-height-base;
          url('../assets/fonts/CircularStd-Medium.ttf') format('truetype');
   }
 
-body { color: $c4 !important; font-size: 1rem !important; }
-a { transition: 200ms; }
+body {
+    color: $c4 !important;
+    font-size: 1.25rem !important;
+
+    @include media-breakpoint-down(lg) {
+        font-size: 1.125rem !important;
+    }
+}
+
+a {
+    transition: 200ms;
+}
 
 .btn {
     text-transform: uppercase;
     font-weight: 700 !important;
-   font-size:  0.75rem !important;
-   letter-spacing: 2px;
-   border-radius: 0 !important;
+    font-size:  0.75rem !important;
+    letter-spacing: 2px;
+    border-radius: 0 !important;
 }
 
-
+.social-links i::before {
+    font-size: 30px;
+}
 
 .footer { 
     ul {
